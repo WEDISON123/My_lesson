@@ -1,8 +1,16 @@
 # vue3 写商城 
 - 简历需要 
 
-- vue3 语法
-    - 过滤器 filters computed data -> 计算 格式转化 进制转换 汇率 语言 app.config.          globalProperties.$filters = { prefix(url) { if () ...... } }
+- vue3 语法     换了表现形式
+    - 过滤器 filters 
+        computed data -> 计算 
+        格式转化 进制转换 汇率 语言 
+        入口可以配置多个过滤器
+        app.config.globalProperties.$filters = { 
+            prefix(url) { 
+                if () ...... 
+            } 
+        }
 
 - 设计模式 DRY Don't repeat yourself
 
@@ -115,13 +123,23 @@
         request/response 
         return res.data
 
-- 骨架屏方案 用户体验优化 skeleton vant 提供了这个组件 template 显示出来 3251 3,251
+- 骨架屏方案 用户体验优化 
+    skeleton vant 提供了这个组件 
+    <van-skeleton title :row="3" :loading="state.loading">
+        template 显示出来
+    </van-skeleton>
+    3251 3,251 
 
 - 图片懒加载 第一等 减少http请求数
-    - html 文件中 link src img script 启动新的http请求 公路一样有限制的 请求并发数 越多的话 页面加载就越慢
+    - html 文件中 link src img script 启动新的http请求 
+        公路一样有限制的 
+        请求并发数 越多的话 页面加载就越慢
     - 可视区内图片加载
     - 非可视区内延迟加载, 可视区滚动到哪里加载相应
-    - vant 内置了Lazyload vue directives 指令集 自定义指令 v-lazyload 命令组件或标签做相应的事情 更简单直观
+    - vant 内置了Lazyload 
+        vue directives 指令集 自定义指令 v-lazyload 
+        命令组件或标签做相应的事情 
+        更简单直观
     - base64 png/jpg 更小 放到css js 文件中 不需要png 额外的文件, 有效的减少了并发数
 
 - vue-router 细节考点
