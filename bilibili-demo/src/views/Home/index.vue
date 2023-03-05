@@ -21,7 +21,6 @@
     import HomeSwiper from '@/components/HomeSwiper.vue'
     import HomeVedioList from '@/components/HomeVedioList.vue'
     import { computed } from '@vue/reactivity'
-    import axios from 'axios'
     import { useProductsStore } from '@/store/products'
     import { useHomeStore } from '@/store/home'
 
